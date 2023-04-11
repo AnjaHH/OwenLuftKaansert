@@ -1,0 +1,107 @@
+/*
+Theme name: Kaansert Theme
+Author: Anja Hein
+Description: A theme for the Owen Luft Kaansert project
+Version: 1.1
+*/
+
+html {
+    margin-left: 100px;
+}
+
+h1 {
+   
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #000000;
+}
+
+/* Vertical header */
+
+
+.site-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100px;
+    background-color: #F6E9B9;
+    z-index: 9999;
+}
+
+.site-header .site-branding {
+    margin: 0;
+}
+
+.site-header .vertical-navigation {
+    display: block;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 100%;
+}
+
+.site-header .vertical-navigation ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.site-header .vertical-navigation ul li {
+    display: block;
+    text-align: center;
+    padding: 10px;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.site-header .vertical-navigation ul li:last-child {
+    border-bottom: none;
+}
+
+.site-header .vertical-navigation ul li a {
+    color: #000000;
+    font-size: 16px;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-decoration: none;
+}
+
+.site-header .vertical-navigation ul li a:hover {
+    color: #ff0000;
+}
+
+/* Content */
+
+.top {
+    height: 400px;
+    width: 100%;
+    background-color: red;
+    padding: 20px;
+
+}
+
+/* Footer */
+
+.footer {
+    height: 400px;
+    width: 100%;
+    display: flex;
+
+    background-color: blue;
+}
+
+.footer-left {
+    display: flex;
+    justify-content: end;
+    flex-direction: column;
+    width: 50%;
+    padding: 20px;
+}
+.footer-right {
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    flex-direction: column;
+    width: 50%;
+    padding: 20px;
+}
