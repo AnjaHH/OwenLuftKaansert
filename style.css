@@ -67,7 +67,7 @@ h1 {
 }
 
 .site-header .vertical-navigation ul li a:hover {
-    color: #ff0000;
+    color: #64a9e2;
 }
 
 /* Content */
@@ -75,7 +75,7 @@ h1 {
 .top {
     height: 400px;
     width: 100%;
-    background-color: red;
+    background-color: #64a9e2;
     padding: 20px;
 
 }
@@ -87,7 +87,7 @@ h1 {
     width: 100%;
     display: flex;
 
-    background-color: blue;
+    background-color: #64a9e2;
 }
 
 .footer-left {
