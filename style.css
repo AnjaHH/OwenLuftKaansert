@@ -2,18 +2,30 @@
 Theme name: Kaansert Theme
 Author: Anja Hein
 Description: A theme for the Owen Luft Kaansert project
-Version: 1.1
+Version: 1.2
 */
 
 html {
     margin-left: 100px;
 }
 
+h1, h2, h3, h4, h5, h6, p {
+    color: #ffffff !important;
+}
+
 h1 {
-   
+   font-size: 15vw !important;
     font-weight: bold;
     text-transform: uppercase;
-    color: #000000;
+    color: #ffffff;
+}
+
+h3 {
+    font-size: 6vw !important;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #ffffff;
+    
 }
 
 /* Vertical header */
@@ -25,7 +37,7 @@ h1 {
     left: 0;
     height: 100%;
     width: 100px;
-    background-color: #F6E9B9;
+    background-color: #FCCF52;
     z-index: 9999;
 }
 
@@ -59,7 +71,7 @@ h1 {
 }
 
 .site-header .vertical-navigation ul li a {
-    color: #000000;
+    color: #ffffff;
     font-size: 16px;
     font-weight: bold;
     text-transform: uppercase;
@@ -75,11 +87,96 @@ h1 {
 .top {
     height: 400px;
     width: 100%;
-    background-color: #64a9e2;
+    background-color: #FCCF52;
     padding: 20px;
 
 }
 
+.box {
+    width: 100%;
+    height: auto;
+    background-color: #7EBDC2 !important;
+    
+}
+
+.buy-ticket {
+    height: 400px;
+    width: 100%;
+    padding: 20px;
+}
+
+/* button */
+
+.buy-ticket {
+display: flex;
+justify-content: flex-end;
+align-items: flex-end;
+}
+
+h4 {
+
+    font-size: 2.5vw !important;
+    margin-bottom: 0px !important;
+    display: flex;
+    justify-content: center;
+    color: #FFFFFF;
+    
+}
+
+.buy-ticket-button {
+    width: 30vw;
+    height: 50px;
+    border: 1px solid #FFFFFF;
+    border-radius: 55px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* front page */
+
+.line-up-heading {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+
+.line-up {
+    display: flex;
+    flex-direction: row;
+}
+
+.line-up-names {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start !important;
+    align-items: flex-start !important;
+    width: 50%;
+    padding: 50px;
+}
+
+h5 {
+    font-size: 4vw !important;
+    
+}
+
+.line-up-gallery {
+    display: flex;
+    flex-direction: column;
+   
+    width: 50%;
+    padding: 20px;
+}
+
+.gallery-heading {
+    padding-left: 50px;
+}
+
+
+.explore-heading {
+    padding-left: 50px;
+}
 /* Footer */
 
 .footer {
@@ -87,7 +184,7 @@ h1 {
     width: 100%;
     display: flex;
 
-    background-color: #64a9e2;
+    background-color: #71996E;
 }
 
 .footer-left {

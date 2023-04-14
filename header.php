@@ -20,7 +20,7 @@
     </div><!-- .vertical-navigation -->
     <div class="site-branding">
         <?php the_custom_logo(); ?>
-        <h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
+        <h2 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h2>
         <p class="site-description"><?php bloginfo( 'description' ); ?></p>
     </div><!-- .site-branding -->
 </header><!-- #masthead -->
