@@ -11,6 +11,8 @@
                 <?php wp_reset_postdata(); ?>
 
     </div>
+</div>
+<div class="footer-second">
     <div class="footer-info">
         <div class="footer-left">
             <p><?php the_field("cvr") ?></p>
@@ -25,6 +27,7 @@
         </div>
     </div>
 </div>
+
 
 </body>
 </html>

@@ -9,7 +9,7 @@
 
         <?php $loop = new WP_Query(array('post_type' => 'info', 'orderby' => 'post_id', 'order' => 'ASC')); ?>
                 <?php while ($loop->have_posts()) : $loop->the_post(); ?>
-                    <div class="info reveal">
+                    <div class="info ">
                         <div id="info-name">
                             <h3><?php the_field("info-title") ?></h3> 
                         </div>
@@ -17,8 +17,8 @@
                             <div id="info-details">
                                 <p><?php the_field("info-text") ?></p>
                             </div>
-                            <div id="info-image">
-                                <img src="<?php the_field("info-image") ?>" alt="">
+                            <div id="info-image ">
+                                <img class="info-img reveal" src="<?php the_field("info-image") ?>" alt="">
                                 
                             </div>
                         </div>
