@@ -64,6 +64,19 @@ li {
     color: #ffffff;
 }
 
+a {
+    text-decoration: none !important;
+    color: inherit;
+    line-height: 1;
+    color: #fff !important;
+  }
+
+  ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
 /* animation */
 
 .reveal{
@@ -82,56 +95,87 @@ li {
 /* Vertical header */
 
 
-.site-header {
+
+.toggle-nav {
     
-    position: fixed;
-    top: 0;
-    left: 0;
-    height: 100%;
-    width: 60px;
-    z-index: 9999;
+    float: left;
+    margin: 25px;
+    font-size: 2em;
+    transition: color linear 0.15s;
+  
 }
-
-.site-header .site-branding {
-    margin: 0;
+    
+a.toggle-nav:link, 
+a.toggle-nav:visited,
+a.toggle-nav:hover, 
+a.toggle-nav:active {
+    text-decoration: none;
+    color: #fff;
+} 
+.menu.main {
+    position: relative;
+    background: #fff;
+    
 }
-
-.site-header .vertical-navigation {
-    display: block;
+	
+.menu.main ul {
+    display: none;
     position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    width: 100%;
+    overflow: auto;
+    top: 0px;
+    right: 0px;
+    z-index: 999;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    padding-right: 15px;
+    background: #7EBDC2;
 }
 
-.site-header .vertical-navigation ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-}
 
-.site-header .vertical-navigation ul li {
+.menu.main ul li:hover > ul {
     display: block;
-    text-align: center;
-    padding: 10px;
-    border-bottom: 1px solid #f0f0f0;
+}
+.menu.main ul ul {
+    display: none;
+    position: absolute;
+    top: 3em;
+    left: 0;
+    z-index: 99999;
+    width: 180px;
+    background: #fff;
+    box-shadow: 0px 3px 3px rgba(0,0,0,0.2);
 }
 
-.site-header .vertical-navigation ul li:last-child {
-    border-bottom: none;
+.menu.main ul li {
+    float: none;
+    display: block;
+    position: relative;
+    top: 0px;
+    right: 0px;
+    min-width: 200px;
+    color: #fff;
+    text-align: left;
 }
-
-.site-header .vertical-navigation ul li a {
-    color: #ffffff;
-    font-size: 16px;
+.menu.main ul li a {
     font-weight: bold;
     text-transform: uppercase;
-    text-decoration: none;
+    
+}
+	
+.main.menu li:after { 
+    content: none; 
 }
 
-.site-header .vertical-navigation ul li a:hover {
-    color: #64a9e2;
+#menu-main-menu {
+    width: 90vw;
+    
+    height: 100vh;
 }
+
+
 
 /* Content */
 
@@ -210,6 +254,7 @@ padding-right: 80px;
     --bg-h: 100%;
     text-decoration:  none !important;
     
+    
   }
 
   .artist-hover:where(:hover, :focus-visible) {
@@ -229,11 +274,6 @@ padding-right: 80px;
     text-align: center;
   }
   
-  a {
-    text-decoration: none;
-    color: inherit;
-    line-height: 1;
-  }
   
   
 
@@ -257,42 +297,36 @@ padding-right: 80px;
 
 .line-up {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     padding-left: 80px;
   
+}
+
+#info-line-up {
+    display: flex;
+    flex-direction: row;
+}
+
+body > div.box > div.line-up > div:nth-child(1) {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    
 }
 
 .line-up-gallery {
     background-color: #FCCF52;
 }
 
-.line-up-img {
+
+
+#image-holder {
+    height: 500px;
     width: 400px;
-    padding: 20px;}
-
-.line-up-names {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start !important;
-    align-items: flex-start !important;
-    width: 50%;
-    padding: 80px;
-    
+    margin: 20px;
+    object-fit: contain;
 }
 
-.line-up-names a {
-    text-decoration: none;
-}
-
-
-
-.line-up-gallery {
-    display: flex;
-    flex-direction: column;
-   
-    width: 50%;
-    padding: 20px;
-}
 
 .gallery-heading {
     padding-left: 80px;
@@ -349,9 +383,17 @@ padding-right: 80px;
     width: 50%;
 }
 
-#info-image {
-    padding: 20px;
+#info-image\ {
+    padding: 20px ;
+    background-color: #FCCF52 ;
+    width: 50%;
 }
+
+.info-img {
+   
+    width: 100%;
+}
+
 
 
 

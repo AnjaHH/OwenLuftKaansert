@@ -11,20 +11,36 @@
 
 <body>
 
-<header id="masthead" class="site-header" role="banner">
-    <div class="vertical-navigation">
-        <nav class="main-navigation" role="navigation">
-            <ul class="menu">
-            <?php wp_nav_menu(array("theme_location" => "header-menu-location")) ?>
-            </ul>
-        </nav><!-- .main-navigation -->
-    </div><!-- .vertical-navigation -->
-    <div class="site-branding">
-        <?php the_custom_logo(); ?>
-        <h2 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h2>
-        <p class="site-description"><?php bloginfo( 'description' ); ?></p>
-    </div><!-- .site-branding -->
-</header><!-- #masthead -->
+<div class="header-bg">
+    
+	<header role="banner">
+	
+		
+	
+		<div >	
+			<a class="toggle-nav" href="#">&#9776;</a>	
+		</div> <!-- .one-half right -->
+		
+	</header><!-- header -->
+		
+</div><!-- header-bg-->
+<!-- full width navigation menu - not on landing page -->
+<nav class="menu main">
+	<div class="skip-link screen-reader-text">
+        <a href="#content" title="<?php esc_attr_e( 'Skip to content', 'compass' ); ?>">
+            <?php _e( 'Skip to content', 'twentyten' ); ?>
+        </a>
+    </div>
+	<?php wp_nav_menu( array( 
+        'container_class' => 'main-nav', 
+        'theme_location' => 'header-menu-location' 
+    ) ); ?>
+</nav><!-- .main -->
+
+
+
+
+
 
 <div class="top">
             <h1><?php the_title() ?></h1>

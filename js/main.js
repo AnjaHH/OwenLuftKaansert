@@ -17,4 +17,7 @@
   }
   
   window.addEventListener("scroll", reveal);
+
+
+
   

@@ -44,22 +44,33 @@ $embed = get_field("video");
             </div>
             
         </div>
+
         <div class="line-up">
-            <div class="line-up-names">
+
+        <?php $loop = new WP_Query(array('post_type' => 'artist', 'orderby' => 'post_id', 'order' => 'ASC')); ?>
+                <?php while ($loop->have_posts()) : $loop->the_post(); ?>
+
+        
+            <div>
+                <div id="info-line-up">
+                <ul>
+                        <li>
+                            <a href="javascript:void(0)" class="artist" data-image-url="<?php the_field("artist-image") ?>"><h5 class="artist-hover"><?php the_field("artist-name") ?></h5></a>
+                        </li>
+
+                </ul>
+                </div>
                 
-                <a href="#" class="artist-hover"><h5><?php the_field("artist1") ?></h5></a>
-                <a href="#" class="artist-hover"><h5><?php the_field("artist2") ?></h5></a>
-                <a href="#" class="artist-hover"><h5><?php the_field("artist3") ?></h5></a>
-                <a href="#" class="artist-hover"><h5><?php the_field("artist4") ?></h5></a>
-                <a href="#" class="artist-hover"><h5><?php the_field("artist5") ?></h5></a>
-                <a href="#" class="artist-hover"><h5><?php the_field("artist6") ?></h5></a>
-            
-            </div>
-            <div class="line-up-gallery reveal">
-                <img class="line-up-img" src="<?php the_field("line-up-image") ?>" alt="">
+                        <div id="image-holder">
+                            <img src="<?php the_field("line-up-image") ?>" alt="">
+                        </div>
             </div>
 
+        <?php endwhile; ?>
+                <?php wp_reset_postdata(); ?>
+
         </div>
+
 
         <div class="gallery">
             <div class="gallery-heading">
@@ -101,6 +112,19 @@ $embed = get_field("video");
             <p>Sorry, we did not find any content to share here.</p>
         <?php endif; ?>
     </div>
+
+    <script>
+
+  var artists = document.getElementsByClassName("artist");
+            console.log(artists);
+            for (var i = 0; i < artists.length; i++) {
+                artists[i].addEventListener("mouseover", function() {
+                    document.getElementById("image-holder").style.backgroundImage = "url('" + this.getAttribute("data-image-url") + "')";
+                });
+               
+            }
+  
+    </script>
 
 
 
