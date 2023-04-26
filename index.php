@@ -47,28 +47,30 @@ $embed = get_field("video");
 
         <div class="line-up">
 
-        <?php $loop = new WP_Query(array('post_type' => 'artist', 'orderby' => 'post_id', 'order' => 'ASC')); ?>
-                <?php while ($loop->have_posts()) : $loop->the_post(); ?>
+            <div id="line-up">
+                <?php $loop = new WP_Query(array('post_type' => 'artist', 'orderby' => 'post_id', 'order' => 'ASC')); ?>
+                        <?php while ($loop->have_posts()) : $loop->the_post(); ?>
 
-        
-            <div>
-                <div id="info-line-up">
-                <ul>
-                        <li>
-                            <a href="javascript:void(0)" class="artist" data-image-url="<?php the_field("artist-image") ?>"><h5 class="artist-hover"><?php the_field("artist-name") ?></h5></a>
-                        </li>
-
-                </ul>
-                </div>
                 
-                        <div id="image-holder">
-                            <img src="<?php the_field("line-up-image") ?>" alt="">
+                    <div>
+                        <div id="info-line-up">
+                        <ul>
+                                <li>
+                                    <a href="javascript:void(0)" class="artist" data-image-url="<?php the_field("artist-image") ?>"><h5 class="artist-hover"><?php the_field("artist-name") ?></h5></a>
+                                </li>
+
+                        </ul>
                         </div>
+                        
+                                
+                    </div>
+
+                <?php endwhile; ?>
+                        <?php wp_reset_postdata(); ?>
             </div>
-
-        <?php endwhile; ?>
-                <?php wp_reset_postdata(); ?>
-
+            <div class="image-holder reveal">
+                 <div id="image-holder" style="background-size: cover"></div>
+            </div>
         </div>
 
 
