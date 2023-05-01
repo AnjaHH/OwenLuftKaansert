@@ -26,6 +26,7 @@
 </div><!-- header-bg-->
 <!-- full width navigation menu - not on landing page -->
 <nav class="menu main">
+    
 	<div class="skip-link screen-reader-text">
         <a href="#content" title="<?php esc_attr_e( 'Skip to content', 'compass' ); ?>">
             <?php _e( 'Skip to content', 'twentyten' ); ?>

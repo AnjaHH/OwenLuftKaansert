@@ -85,26 +85,26 @@ $embed = get_field("video");
 
         </div>
 
+        
+
         <div class="explore ">
             <div class="explore-heading">
                 <h3><?php the_field("headline3") ?></h3>
             </div>
-            <div class="bars reveal">
-            <?php $loop = new WP_Query(array('post_type' => 'bar', 'orderby' => 'post_id', 'order' => 'ASC')); ?>
-                <?php while ($loop->have_posts()) : $loop->the_post(); ?>
-                   
-                    <div id="bars">
-                        <h5><?php the_field("bar-title") ?></h5>
-                        <p><?php the_field("bar-text") ?></p>
 
-                    </div>
-                        
-                <?php endwhile; ?>
-                <?php wp_reset_postdata(); ?>
+            <div id="bar">
+                
+                <div class="bar-marton ">
+                    <p>Regler for deltagelse</p>
+                
+                </div>
+                <div class="bar-marton-kort">
+                    <img src="<?php the_field("bar-image") ?>" alt="">
+                </div>
 
             </div>
             <div id="bars-info">
-                    <h5>Og mange flere!</h5>
+                    <h5>Besøg også vores mange andre barer!</h5>
             </div>
         </div>
 

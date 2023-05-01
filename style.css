@@ -16,6 +16,9 @@ h1 {
     font-weight: bold;
     text-transform: uppercase;
     color: #ffffff;
+    font-family: "quatro", sans-serif;
+    font-weight: 700;
+    font-style: normal;
 }
 
 h3 {
@@ -26,7 +29,9 @@ h3 {
     margin-bottom: 0rem !important;
     padding-top: 30px;
     padding-bottom: 30px;
-    
+    font-family: "quatro", sans-serif;
+    font-weight: 700;
+    font-style: normal;
 }
 
 h4 {
@@ -37,12 +42,16 @@ h4 {
     justify-content: center;
     color: #FFFFFF;
     text-decoration: none ;
-    
+    font-family: "quatro", sans-serif;
+    font-weight: 700;
+    font-style: normal;
 }
 
 h5 {
     font-size: 4vw !important;
-    
+    font-family: "quatro", sans-serif;
+    font-weight: 400;
+    font-style: normal;
 }
 
 h6 {
@@ -52,11 +61,17 @@ h6 {
     margin-bottom: 0rem !important;
     padding-top: 30px;
     padding-bottom: 30px;
+    font-family: "quatro", sans-serif;
+    font-weight: 400;
+    font-style: italic;
 }
 
 p {
     font-size: 16px !important;
     margin-bottom: 0rem !important;
+    font-family: "quatro", sans-serif;
+    font-weight: 400;
+    font-style: normal;
     
 }
 
@@ -76,6 +91,8 @@ a {
     padding: 0;
     margin: 0;
   }
+
+ 
 
 /* animation */
 
@@ -135,9 +152,7 @@ a.toggle-nav:active {
     background: #7EBDC2;
 }
 
-/*#menu-main-menu {
-    display: flex;
-}*/
+
 
 .menu.main ul li:hover > ul {
     display: block;
@@ -186,7 +201,7 @@ a.toggle-nav:active {
 .hero-video {
     position: relative;
     width: 100%;
-    height: -100px;
+    
     padding-bottom: 56.25%; /* 16:9 aspect ratio */
 }
 
@@ -223,6 +238,7 @@ display: flex;
 justify-content: flex-end;
 align-items: flex-end;
 padding-right: 80px;
+margin-top: -250px;
 }
 
 
@@ -358,13 +374,27 @@ body > div.box > div.line-up > div:nth-child(1) {
     padding-left: 80px;
 }
 
-#bars {
-    
-    gap: 10px;
-    display: flex;
-    flex-direction: column;
+#bar {
+    width: 100%;
     padding-left: 80px;
-    
+    display: flex;
+    flex-direction: row;
+}
+
+.bar-marton {
+    width: 50%;
+    padding: 20px;
+}
+
+.bar-marton-kort {
+    width: 50%;
+    padding: 20px;
+}
+
+.bar-marton-kort img {
+    width: 100%;
+    height: 100%;
+    background-size: cover;
 }
 
 #bars-info {
@@ -409,6 +439,43 @@ body > div.box > div.line-up > div:nth-child(1) {
 }
 
 
+/* Artist page */
+
+.artist {
+    background-color: #7EBDC2;
+    width: 100%;
+    height: auto;
+    
+    display: flex;
+    flex-direction: row;
+}
+
+#artist-picture {
+    width: 50%;
+    height: 100%;
+    position:relative;
+  display:inline-block;
+   
+    
+}
+
+
+#artist-picture img {
+    width: 100%;
+    height: 100%;
+    mask-image: linear-gradient(to left, rgba(0,0,0,0) 0%,rgba(0,0,0,0.65) 100%);
+   -webkit-mask-image: linear-gradient(to left, rgba(0,0,0,0) 0%,rgba(0,0,0,0.65) 100%);
+}
+
+
+.artist-info {
+    width: 50%;
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
 
 
 
@@ -420,12 +487,12 @@ body > div.box > div.line-up > div:nth-child(1) {
     display: flex;
     background-color: #71996E;
     flex-direction: column;
-    padding-left: 80px;
+   
     align-items: center;
 }
 
 .sponsors {
-    width: 80%;
+    width: 100%;
     padding-top: 20px;
     flex-wrap: wrap;
     display: flex;
@@ -443,7 +510,7 @@ body > div.box > div.line-up > div:nth-child(1) {
     display: flex;
     background-color: #71996E;
     flex-direction: column;
-    padding-left: 80px;
+    
 }
 
 .footer-info {
@@ -467,4 +534,69 @@ body > div.box > div.line-up > div:nth-child(1) {
 }
 
 
+
+
+
+
+@media screen and (max-width: 750px) {
+
+    .top {
+        height: auto;
+       
+    }
+
+    .hero-video {
+        position: relative;
+        width: 100%;
+        
+        padding-bottom: 56.25%; /* 16:9 aspect ratio */
+    }
+    
+    .hero-video video {
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        
+        width: 100%;
+        height: 100%;
+    
+    }
+
+    .buy-ticket {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding-right: 0px;
+        margin-top: 20px;
+        }
+        
+        
+        .buy-ticket-button {
+            width: 70vw;
+            
+            
+        }
+
+    .image-holder {
+        display: none;
+    }
+
+    #year {
+        padding-left: 0px;
+    }
+
+    h1 {
+        font-size: 90px !important;
+    }
+
+    .bars {
+        -webkit-transform: rotate(0deg);
+        -moz-transform: rotate(0deg);
+        -o-transform: rotate(0deg);
+        -ms-transform: rotate(0deg);
+        transform: rotate(0deg);
+        padding-left: 0px;
+    }
+
+}
 
