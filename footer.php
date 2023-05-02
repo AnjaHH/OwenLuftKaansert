@@ -20,13 +20,26 @@
             <p><?php the_field("zip+town") ?></p>
         
         </div>
+        <div class="footer-mid">
+             <p>Owen Luft Kaansert - All Rights Reserved</p>
+        </div>
         <div class="footer-right">
-            <p>CVR: 00000000</p>
-            <p>Sønderskovvej 107</p>
-            <p>6800 Varde</p>
+            <div class="footer-links">
+                <a href="#"><i class="bi bi-arrow-right"></i> Kunstnere</a>
+                <a href="#"><i class="bi bi-arrow-right"></i> Praktisk info</a>
+                <a href="#"><i class="bi bi-arrow-right"></i> Om Owen Luft</a>
+                
+            </div>
+            <div class="footer-links">
+                <a href="#"><i class="bi bi-arrow-right"></i> Historie</a>
+                <a href="#"><i class="bi bi-arrow-right"></i> Privatlivs politik</a>
+                <a href="#"><i class="bi bi-arrow-right"></i> Presse</a>
+            </div>
+            
         </div>
     </div>
 </div>
+
 
 
 </body>

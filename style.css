@@ -48,7 +48,7 @@ h4 {
 }
 
 h5 {
-    font-size: 4vw !important;
+    font-size: 3vw !important;
     font-family: "quatro", sans-serif;
     font-weight: 400;
     font-style: normal;
@@ -118,7 +118,7 @@ a {
     z-index: 1000;
     float: left;
     margin: 25px;
-    font-size: 2em;
+    font-size: 3em;
     transition: color linear 0.15s;
   
 }
@@ -130,6 +130,28 @@ a.toggle-nav:active {
     text-decoration: none;
     color: #fff;
 } 
+
+.bi.bi-instagram{
+    position: absolute;
+    left: 5px;
+    top: 100px;
+    z-index: 1000;
+    float: left;
+    transition: color linear 0.15s;
+    margin: 25px;
+    font-size: 2em;
+}
+.bi.bi-facebook{
+    position: absolute;
+    left: 5px;
+    top: 155px;
+    z-index: 1000;
+    float: left;
+    transition: color linear 0.15s;
+    margin: 25px;
+    font-size: 2em;
+}
+
 .menu.main {
     position: relative;
     background: #fff;
@@ -149,7 +171,7 @@ a.toggle-nav:active {
     gap: 20px;
     padding-left: 150px;
     padding-top: 50px;
-    background: #7EBDC2;
+    background: #7EBDC2; 
 }
 
 
@@ -225,9 +247,22 @@ a.toggle-nav:active {
 .box {
     width: 100%;
     height: auto;
-    background-color: #7EBDC2 !important;
+  
+    
     
 }
+
+.box img {
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+body {
+    font-size: 2em;
+    text-align: center;
+    background-image: linear-gradient(#7EBDC2,#7EBDC2, #7EBDC2, #fff);
+
+  }
 
 
 
@@ -239,6 +274,7 @@ justify-content: flex-end;
 align-items: flex-end;
 padding-right: 80px;
 margin-top: -250px;
+padding-bottom: 20px;
 }
 
 
@@ -289,15 +325,6 @@ margin-top: -250px;
     --bg-h: 2px;
   }
   
-  body {
-    font-size: 2em;
-    text-align: center;
-  }
-  
-  
-  
-
-
 
 
 /* front page */
@@ -305,7 +332,9 @@ margin-top: -250px;
 .line-up-heading {
     display: flex;
     flex-direction: row;
-   padding-left: 80px;
+    padding-left: 80px;
+    border-bottom: 1px solid #FFFFFF;
+    border-top: 1px solid #FFFFFF;
     
 }
 
@@ -319,7 +348,8 @@ margin-top: -250px;
     display: flex;
     flex-direction: row;
     padding-left: 80px;
-  
+    padding-top: 20px;
+    padding-bottom: 20px;
 }
 
 #line-up {
@@ -346,7 +376,7 @@ body > div.box > div.line-up > div:nth-child(1) {
 
 
 .image-holder {
-    height: 500px;
+    height: 550px;
     width: 50%;
     background-color: #FCCF52;
 }
@@ -354,12 +384,14 @@ body > div.box > div.line-up > div:nth-child(1) {
     height: 90%;
     width: 90%;  
    
-    margin: 20px;
+    margin: 30px;
 }
 
 
 .gallery-heading {
     padding-left: 80px;
+    border-bottom: 1px solid #FFFFFF;
+    border-top: 1px solid #FFFFFF;
 }
 
 .gallery-carousel {
@@ -372,6 +404,8 @@ body > div.box > div.line-up > div:nth-child(1) {
 
 .explore-heading {
     padding-left: 80px;
+    border-bottom: 1px solid #FFFFFF;
+    border-top: 1px solid #FFFFFF;
 }
 
 #bar {
@@ -389,18 +423,25 @@ body > div.box > div.line-up > div:nth-child(1) {
 .bar-marton-kort {
     width: 50%;
     padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-content: center;
 }
 
 .bar-marton-kort img {
-    width: 100%;
-    height: 100%;
+    width: 250px;
     background-size: cover;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    rotate: 10deg;
+    margin-top: 30px;
+    
 }
 
 #bars-info {
     display: flex;
     justify-content: end;
     padding: 20px;
+    
 }
 
 
@@ -441,11 +482,12 @@ body > div.box > div.line-up > div:nth-child(1) {
 
 /* Artist page */
 
-.artist {
-    background-color: #7EBDC2;
+.artists {
+   
     width: 100%;
-    height: auto;
-    
+    height: 600px;
+    border-top: 1px solid #FFFFFF;
+    border-bottom: 1px solid #FFFFFF;
     display: flex;
     flex-direction: row;
 }
@@ -454,7 +496,8 @@ body > div.box > div.line-up > div:nth-child(1) {
     width: 50%;
     height: 100%;
     position:relative;
-  display:inline-block;
+    display:inline-block;
+    
    
     
 }
@@ -465,12 +508,14 @@ body > div.box > div.line-up > div:nth-child(1) {
     height: 100%;
     mask-image: linear-gradient(to left, rgba(0,0,0,0) 0%,rgba(0,0,0,0.65) 100%);
    -webkit-mask-image: linear-gradient(to left, rgba(0,0,0,0) 0%,rgba(0,0,0,0.65) 100%);
+   object-fit: cover;
 }
 
 
 .artist-info {
     width: 50%;
-    
+    padding: 20px;
+    gap: 20px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -503,6 +548,7 @@ body > div.box > div.line-up > div:nth-child(1) {
 .sponsor-img {
     width: 150px;
     padding: 20px;
+    object-fit: contain;
 }
 
 .footer-second {
@@ -521,15 +567,29 @@ body > div.box > div.line-up > div:nth-child(1) {
     display: flex;
     justify-content: end;
     flex-direction: column;
-    width: 50%;
-    padding: 20px;
+    width: 30%;
+    padding: 40px;
 }
+
+.footer-mid {
+    width: 40%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .footer-right {
     display: flex;
     justify-content: flex-end;
     align-items: flex-end;
+    flex-direction: row;
+    width: 30%;
+    padding: 20px;
+}
+.footer-links {
+    display: flex;
     flex-direction: column;
-    width: 50%;
+    gap: 10px;
     padding: 20px;
 }
 
@@ -541,7 +601,7 @@ body > div.box > div.line-up > div:nth-child(1) {
 @media screen and (max-width: 750px) {
 
     .top {
-        height: auto;
+        height: 190px;
        
     }
 
@@ -586,7 +646,7 @@ body > div.box > div.line-up > div:nth-child(1) {
     }
 
     h1 {
-        font-size: 90px !important;
+        font-size: 60px !important;
     }
 
     .bars {
@@ -597,6 +657,28 @@ body > div.box > div.line-up > div:nth-child(1) {
         transform: rotate(0deg);
         padding-left: 0px;
     }
+
+    #bar {
+        flex-direction: column;
+        padding-left: 0px;
+    }
+    
+    .bar-marton {
+        width: 100%;
+        padding-left: 80px;
+       
+    }
+    
+    .bar-marton-kort {
+        width: 100%;
+        
+    }
+
+    .artist-info {
+        width: 100%;
+        
+    }
+
 
 }
 

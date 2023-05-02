@@ -12,6 +12,7 @@ $embed = get_field("video");
         <?php if(have_posts()): ?>
         <?php while(have_posts()): the_post() ?>
 
+
         <div class="hero-video">
             <?php
                 $video = get_field('video');
@@ -98,7 +99,7 @@ $embed = get_field("video");
                     <p>Regler for deltagelse</p>
                 
                 </div>
-                <div class="bar-marton-kort">
+                <div class="bar-marton-kort reveal">
                     <img src="<?php the_field("bar-image") ?>" alt="">
                 </div>
 

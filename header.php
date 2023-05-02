@@ -20,6 +20,12 @@
 		<div >	
 			<a class="toggle-nav" href="#">&#9776;</a>	
 		</div> <!-- .one-half right -->
+        <div>
+            <a href="#"><i class="bi bi-instagram"></i></a>
+        </div>
+        <div>
+            <a href="#"><i class="bi bi-facebook"></i></a>
+        </div>
 		
 	</header><!-- header -->
 		
