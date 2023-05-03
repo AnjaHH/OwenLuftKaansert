@@ -5,6 +5,19 @@ Description: A theme for the Owen Luft Kaansert project
 Version: 1.2
 */
 
+.section {
+    display: flex;
+    flex-direction: row;
+}
+
+.sidebar {
+    width: 80px;
+    height: 100vw;
+    top: 0px;
+    border-right: 1px solid #ffffff;
+    position: fixed;
+    z-index: 999;
+}
 
 
 h1, h2, h3, h4, h5, p {
@@ -56,14 +69,14 @@ h5 {
 
 h6 {
     font-size: 6vw !important;
-    font-weight: bold;
+    font-weight: bolder !important;
     color: #FCCF52 !important;
     margin-bottom: 0rem !important;
     padding-top: 30px;
     padding-bottom: 30px;
     font-family: "quatro", sans-serif;
-    font-weight: 400;
-    font-style: italic;
+    font-weight: 1000;
+    font-style: normal;
 }
 
 p {
@@ -117,7 +130,7 @@ a {
     position: sticky;
     z-index: 1000;
     float: left;
-    margin: 25px;
+    margin: 20px;
     font-size: 3em;
     transition: color linear 0.15s;
   
@@ -138,7 +151,7 @@ a.toggle-nav:active {
     z-index: 1000;
     float: left;
     transition: color linear 0.15s;
-    margin: 25px;
+    margin: 20px;
     font-size: 2em;
 }
 .bi.bi-facebook{
@@ -148,7 +161,7 @@ a.toggle-nav:active {
     z-index: 1000;
     float: left;
     transition: color linear 0.15s;
-    margin: 25px;
+    margin: 20px;
     font-size: 2em;
 }
 
@@ -229,7 +242,7 @@ a.toggle-nav:active {
 
 .hero-video video {
     position: absolute;
-    top: -100px;
+    top: -140px;
     left: 200px;
     width: 70%;
     height: 70%;
@@ -241,7 +254,7 @@ a.toggle-nav:active {
     width: 100%;
     background-color: #FCCF52;
     padding: 20px;
-    padding-left: 80px;
+    padding-left: 110px;
 }
 
 .box {
@@ -332,7 +345,7 @@ padding-bottom: 20px;
 .line-up-heading {
     display: flex;
     flex-direction: row;
-    padding-left: 80px;
+    padding-left: 110px;
     border-bottom: 1px solid #FFFFFF;
     border-top: 1px solid #FFFFFF;
     
@@ -389,7 +402,7 @@ body > div.box > div.line-up > div:nth-child(1) {
 
 
 .gallery-heading {
-    padding-left: 80px;
+    padding-left: 110px;
     border-bottom: 1px solid #FFFFFF;
     border-top: 1px solid #FFFFFF;
 }
@@ -403,14 +416,14 @@ body > div.box > div.line-up > div:nth-child(1) {
 
 
 .explore-heading {
-    padding-left: 80px;
+    padding-left: 110px;
     border-bottom: 1px solid #FFFFFF;
     border-top: 1px solid #FFFFFF;
 }
 
 #bar {
     width: 100%;
-    padding-left: 80px;
+    padding-left: 110px;
     display: flex;
     flex-direction: row;
 }
@@ -532,7 +545,7 @@ body > div.box > div.line-up > div:nth-child(1) {
     display: flex;
     background-color: #71996E;
     flex-direction: column;
-   
+   padding-left: 80px;
     align-items: center;
 }
 
@@ -553,6 +566,7 @@ body > div.box > div.line-up > div:nth-child(1) {
 
 .footer-second {
     width: 100%;
+    padding-left: 80px;
     display: flex;
     background-color: #71996E;
     flex-direction: column;
@@ -567,12 +581,12 @@ body > div.box > div.line-up > div:nth-child(1) {
     display: flex;
     justify-content: end;
     flex-direction: column;
-    width: 30%;
+    width: 20%;
     padding: 40px;
 }
 
 .footer-mid {
-    width: 40%;
+    width: 45%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -583,7 +597,7 @@ body > div.box > div.line-up > div:nth-child(1) {
     justify-content: flex-end;
     align-items: flex-end;
     flex-direction: row;
-    width: 30%;
+    width: 35%;
     padding: 20px;
 }
 .footer-links {
@@ -593,6 +607,13 @@ body > div.box > div.line-up > div:nth-child(1) {
     padding: 20px;
 }
 
+.payment {
+    height: 30px;
+    background-color: #71996E;
+    border-top: 1px solid #FFFFFF;
+    width: 100%;
+}
+
 
 
 
@@ -600,13 +621,21 @@ body > div.box > div.line-up > div:nth-child(1) {
 
 @media screen and (max-width: 750px) {
 
+    .sidebar {
+        display: none;
+    }
+
+    .bi.bi-instagram {
+        top: 107px;
+    }
+
     .top {
         height: 190px;
        
     }
 
     .hero-video {
-        position: relative;
+        
         width: 100%;
         
         padding-bottom: 56.25%; /* 16:9 aspect ratio */
@@ -637,12 +666,18 @@ body > div.box > div.line-up > div:nth-child(1) {
             
         }
 
+    .line-up-heading, .gallery-heading, .explore-heading, .line-up {
+        padding-left: 60px;
+    }
+
+   
+
     .image-holder {
         display: none;
     }
 
     #year {
-        padding-left: 0px;
+        padding-left: 50px;
     }
 
     h1 {
@@ -665,7 +700,7 @@ body > div.box > div.line-up > div:nth-child(1) {
     
     .bar-marton {
         width: 100%;
-        padding-left: 80px;
+        padding-left: 60px;
        
     }
     
@@ -679,6 +714,35 @@ body > div.box > div.line-up > div:nth-child(1) {
         
     }
 
+    .footer {
+        padding-left: 0px;
+    }
 
+    .footer-second {
+        padding-left: 0px;
+    }
+
+    .footer-info {
+        flex-direction: column;
+        padding-left: 0px;
+    }
+
+    .footer-left  {
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        padding-bottom: 0px;
+
+    }
+
+    .footer-right{
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+    }
+
+    .footer-mid {
+        display: none;
+    }
 }
 

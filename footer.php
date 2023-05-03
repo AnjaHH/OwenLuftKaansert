@@ -21,7 +21,7 @@
         
         </div>
         <div class="footer-mid">
-             <p>Owen Luft Kaansert - All Rights Reserved</p>
+             <p>Owen Luft Kånsert - All Rights Reserved</p>
         </div>
         <div class="footer-right">
             <div class="footer-links">
@@ -37,8 +37,11 @@
             </div>
             
         </div>
+        
     </div>
+    
 </div>
+<div class="payment"></div>
 
 
 
