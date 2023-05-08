@@ -7,6 +7,18 @@
        wp_enqueue_style("adobe-font", "https://use.typekit.net/yhk8nuk.css");
     }
 
+    function custom_logo_setup() {
+        $config = array(
+            'height'               => 292,
+            'width'                => 379,
+            
+        );
+        add_theme_support( 'custom-logo', $config );
+     
+    }
+    add_action( 'after_setup_theme', 'custom_logo_setup' );
+ 
+
    add_action("wp_enqueue_scripts", "kaansert_register_stylesheet"); 
 
    function kaansert_register_menu_location() {
@@ -20,5 +32,14 @@
  
 }
 add_action( 'wp_enqueue_scripts', 'kaansert_burger_menu_scripts' );
+
+
+function to_top_button(){
+    ?>
+    <button onclick="topFunction()" id="myBtn" title="Go to top"><i class="bi bi-arrow-up-circle-fill"></i></button>
+    <?php
+}
+add_action("wp_enqueue_scripts","to_top_button");
+
 
 

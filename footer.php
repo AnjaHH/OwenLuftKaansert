@@ -15,9 +15,9 @@
 <div class="footer-second">
     <div class="footer-info">
         <div class="footer-left">
-            <p><?php the_field("cvr") ?></p>
-            <p><?php the_field("adresse") ?></p>
-            <p><?php the_field("zip+town") ?></p>
+            <p>CVR: 44005239</p>
+            <p>Sønderskovvej 107</p>
+            <p>6800 Varde</p>
         
         </div>
         <div class="footer-mid">

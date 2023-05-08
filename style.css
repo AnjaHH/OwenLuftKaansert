@@ -126,6 +126,8 @@ a {
 
 
 
+
+
 .toggle-nav {
     position: sticky;
     z-index: 1000;
@@ -229,6 +231,29 @@ a.toggle-nav:active {
     height: 100vh;
 }
 
+/* style af til top knap */
+
+#myBtn {
+    display: none;
+    position: fixed; 
+    bottom: 20px; 
+    left: 15px; 
+    z-index: 9999; 
+    border: none; 
+    outline: none; 
+    color: #FCCF52; 
+    background-color: transparent;
+    cursor: pointer; 
+   
+    border-radius: 10px; 
+    font-size: 40px; 
+  }
+
+  #myBtn:hover {
+    opacity: 0.7; 
+  }
+
+
 
 
 /* Content */
@@ -242,7 +267,7 @@ a.toggle-nav:active {
 
 .hero-video video {
     position: absolute;
-    top: -140px;
+    top: -100px;
     left: 200px;
     width: 70%;
     height: 70%;
@@ -250,10 +275,11 @@ a.toggle-nav:active {
 }
 
 .top {
-    height: 400px;
+    height: auto;
     width: 100%;
     background-color: #FCCF52;
     padding: 20px;
+    padding-bottom: 100px;
     padding-left: 110px;
 }
 
@@ -273,7 +299,7 @@ a.toggle-nav:active {
 body {
     font-size: 2em;
     text-align: center;
-    background-image: linear-gradient(#7EBDC2,#7EBDC2, #7EBDC2, #fff);
+    background-image: linear-gradient(#7EBDC2, #afd7d9);
 
   }
 
@@ -463,8 +489,9 @@ body > div.box > div.line-up > div:nth-child(1) {
 
 .info {
     display: flex;
-    padding-left: 80px;
+    
     flex-direction: column;
+    
     
 }
 
@@ -474,11 +501,15 @@ body > div.box > div.line-up > div:nth-child(1) {
     width: 100%;
     padding: 20px;
     justify-content: space-between;
+    border-bottom: 1px solid #FFFFFF;
+    border-top: 1px solid #FFFFFF;
+    padding-left: 80px;
 }
 
 #info-details {
     padding: 20px;
     width: 50%;
+    
 }
 
 #info-image\ {
@@ -490,6 +521,10 @@ body > div.box > div.line-up > div:nth-child(1) {
 .info-img {
    
     width: 100%;
+}
+
+#info-name{
+    padding-left: 110px;
 }
 
 
@@ -534,6 +569,39 @@ body > div.box > div.line-up > div:nth-child(1) {
     justify-content: center;
 }
 
+/* Presse side */
+
+.press-header {
+    padding-left: 110px;
+    border-top: 1px solid #FFFFFF;
+    border-bottom: 1px solid #FFFFFF;
+
+}
+
+.press-info{
+    padding-left: 110px;
+    padding-bottom: 50px;
+   padding-top: 20px;
+   padding-right: 20px;
+
+}
+
+/* om side */
+
+.about-header {
+    padding-left: 110px;
+    border-top: 1px solid #FFFFFF;
+    border-bottom: 1px solid #FFFFFF;
+
+}
+
+.about-info{
+    padding-left: 110px;
+    padding-bottom: 50px;
+   padding-top: 20px;
+   padding-right: 20px;
+
+}
 
 
 

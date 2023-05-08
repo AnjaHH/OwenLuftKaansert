@@ -1,5 +1,7 @@
 <?php get_header () ?>
 
+<div class="section">
+    <div class="sidebar"></div>
 
     <div class="box">
         <?php if(have_posts()): ?>
@@ -36,6 +38,8 @@
         <?php else: ?>
             <p>Sorry, we did not find any content to share here.</p>
         <?php endif; ?>
+    </div>
+
     </div>
 
 

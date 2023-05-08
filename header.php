@@ -21,10 +21,10 @@
 			<a class="toggle-nav" href="#">&#9776;</a>	
 		</div> <!-- .one-half right -->
         <div>
-            <a href="#"><i class="bi bi-instagram"></i></a>
+            <a href="https://www.instagram.com/owenluftkaensert/"><i class="bi bi-instagram"></i></a>
         </div>
         <div>
-            <a href="#"><i class="bi bi-facebook"></i></a>
+            <a href="https://www.facebook.com/owenluft?locale=da_DK"><i class="bi bi-facebook"></i></a>
         </div>
 		
 	</header><!-- header -->
@@ -38,10 +38,14 @@
             <?php _e( 'Skip to content', 'twentyten' ); ?>
         </a>
     </div>
+   
 	<?php wp_nav_menu( array( 
         'container_class' => 'main-nav', 
-        'theme_location' => 'header-menu-location' 
+        'theme_location' => 'header-menu-location',
+       
+
     ) ); ?>
+   
 </nav><!-- .main -->
 
 
