@@ -9,11 +9,8 @@
 
 
             <div>
-                <div class="about-header"><h3><?php the_field("about-header") ?></h3></div>
-                <div>
-                    <div class="about-info"><p><?php the_field("about-info") ?></p></div>
-                    <div class="about-img"><img src="<?php the_field("about-img") ?>" alt=""></div>
-                </div>
+                
+                <div class="politik-tekst"><p><?php the_field("politik-tekst") ?></p></div>
             </div>
 
 

@@ -54,6 +54,14 @@
 
 
 <div class="top">
+        <div id="logo" >
+            <?php
+            if ( function_exists( 'the_custom_logo' ) ) {
+                the_custom_logo();
+            }
+            ?>
+
+        </div>
             <h1><?php the_title() ?></h1>
         </div>
 

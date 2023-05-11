@@ -19,8 +19,8 @@
                             <div id="info-details">
                                 <p><?php the_field("info-text") ?></p>
                             </div>
-                            <div id="info-image ">
-                                <img class="info-img reveal " src="<?php the_field("info-image") ?>" alt="">
+                            <div class="info-image reveal">
+                                <img class="info-img" src="<?php the_field("info-image") ?>" alt="">
                                 
                             </div>
                         </div>

@@ -9,8 +9,8 @@
 
     function custom_logo_setup() {
         $config = array(
-            'height'               => 292,
-            'width'                => 379,
+            'height'               => 73,
+            'width'                => 100,
             
         );
         add_theme_support( 'custom-logo', $config );
