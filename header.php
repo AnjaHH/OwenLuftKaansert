@@ -14,12 +14,10 @@
 <div class="header-bg">
     
 	<header role="banner">
-	
-		
-	
+
 		<div >	
 			<a class="toggle-nav" href="#">&#9776;</a>	
-		</div> <!-- .one-half right -->
+		</div> 
         <div>
             <a href="https://www.instagram.com/owenluftkaensert/"><i class="bi bi-instagram"></i></a>
         </div>
@@ -27,26 +25,19 @@
             <a href="https://www.facebook.com/owenluft?locale=da_DK"><i class="bi bi-facebook"></i></a>
         </div>
 		
-	</header><!-- header -->
+	</header>
 		
-</div><!-- header-bg-->
-<!-- full width navigation menu - not on landing page -->
+</div>
+
 <nav class="menu main">
     
-	<div class="skip-link screen-reader-text">
-        <a href="#content" title="<?php esc_attr_e( 'Skip to content', 'compass' ); ?>">
-            <?php _e( 'Skip to content', 'twentyten' ); ?>
-        </a>
-    </div>
-   
 	<?php wp_nav_menu( array( 
         'container_class' => 'main-nav', 
         'theme_location' => 'header-menu-location',
-       
 
     ) ); ?>
    
-</nav><!-- .main -->
+</nav>
 
 
 

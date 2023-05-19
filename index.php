@@ -17,7 +17,8 @@ $embed = get_field("video");
             <?php
                 $video = get_field('video');
                 if( $video ) {
-                    echo '<video controls autoplay="autoplay" muted loop><source src="' . $video['url'] . '" type="' . $video['mime_type'] . '"></video>';
+                    echo '<video controls autoplay="autoplay" muted loop><source src="' 
+                    . $video['url'] . '" type="' . $video['mime_type'] . '"></video>';
             }
             ?>
 
@@ -36,7 +37,7 @@ $embed = get_field("video");
 
         <div class="countdown">
 
-            <!-- <p id="demo"></p> -->
+             <h2 id="demo"></h2> 
 
         </div>
 
@@ -54,17 +55,16 @@ $embed = get_field("video");
                 <?php $loop = new WP_Query(array('post_type' => 'artist', 'orderby' => 'post_id', 'order' => 'ASC')); ?>
                         <?php while ($loop->have_posts()) : $loop->the_post(); ?>
 
-                
                     <div>
                         <div id="info-line-up">
                         <ul>
                                 <li>
-                                    <a href="javascript:void(0)" class="artist" data-image-url="<?php the_field("artist-image") ?>"><h5 class="artist-hover"><?php the_field("artist-name") ?></h5></a>
+                                    <a href="javascript:void(0)" class="artist" data-image-url="<?php the_field("artist-image") ?>">
+                                    <h5 class="artist-hover"><?php the_field("artist-name") ?></h5></a>
                                 </li>
 
                         </ul>
-                        </div>
-                        
+                        </div>         
                                 
                     </div>
 
@@ -82,7 +82,26 @@ $embed = get_field("video");
                 <h3><?php the_field("headline2") ?></h3>
             </div>
             <div class="gallery-carousel reveal">
-               
+            <div class="image-container">
+  <div class="image-wrapper">
+    <div>
+      <img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8c2hvZXxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60" alt="">
+    </div>
+    <div>
+      <img src="https://images.unsplash.com/photo-1607522370275-f14206abe5d3?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8c2hvZXxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60" alt="">
+    </div>
+    <div>
+      <img src="https://images.unsplash.com/photo-1606107557195-0e29a4b5b4aa?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NXx8c2hvZXxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60" alt="">
+    </div>
+    <div>
+      <img src="https://images.unsplash.com/photo-1608231387042-66d1773070a5?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8c2hvZXxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60" alt="">
+    </div>
+    <div>
+      <img src="https://images.unsplash.com/photo-1605348532760-6753d2c43329?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8OHx8c2hvZXxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60" alt="">
+    </div>
+    
+  </div>
+</div>
 
             </div>
 
@@ -129,6 +148,68 @@ $embed = get_field("video");
                 });
                
             }
+
+
+            
+// Set the date we're counting down to
+var countDownDate = new Date("<?php the_field("date")?>").getTime();
+console.log("<?php the_field("date") ?>");
+
+// Update the count down every 1 second
+var x = setInterval(function() {
+
+  // Get today's date and time
+  var now = new Date().getTime();
+
+  // Find the distance between now and the count down date
+  var distance = countDownDate - now;
+
+  // Time calculations for days, hours, minutes and seconds
+  var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+  var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+  var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+  // Display the result in the element with id="demo"
+  document.getElementById("demo").innerHTML = days + "d " + hours + "t "
+  + minutes + "m " + seconds + "s ";
+
+  // If the count down is finished, write some text
+  if (distance < 0) {
+    clearInterval(x);
+    document.getElementById("demo").innerHTML = "EXPIRED";
+  }
+}, 1000);
+
+
+
+const imageWrapper = document.querySelector('.image-wrapper')
+const imageItems = document.querySelectorAll('.image-wrapper > *')
+const imageLength = imageItems.length
+const perView = 3
+let totalScroll = 0
+const delay = 2000
+
+imageWrapper.style.setProperty('--per-view', perView)
+for(let i = 0; i < perView; i++) {
+  imageWrapper.insertAdjacentHTML('beforeend', imageItems[i].outerHTML)
+}
+
+let autoScroll = setInterval(scrolling, delay)
+
+function scrolling() {
+  totalScroll++
+  if(totalScroll == imageLength + 1) {
+    clearInterval(autoScroll)
+    totalScroll = 1
+    imageWrapper.style.transition = '0s'
+    imageWrapper.style.left = '0'
+    autoScroll = setInterval(scrolling, delay)
+  }
+  const widthEl = document.querySelector('.image-wrapper > :first-child').offsetWidth + 24
+  imageWrapper.style.left = `-${totalScroll * widthEl}px`
+  imageWrapper.style.transition = '.3s'
+}
 
 
 

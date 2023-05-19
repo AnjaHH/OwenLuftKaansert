@@ -1,5 +1,5 @@
 
-
+// reveal animation on blocks //
   function reveal() {
     var reveals = document.querySelectorAll(".reveal");
   
@@ -43,3 +43,4 @@ function topFunction() {
   
 
 
+            

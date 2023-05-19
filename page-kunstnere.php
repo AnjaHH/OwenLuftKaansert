@@ -27,7 +27,8 @@
 
                 </div>
                 <div class="reveal">
-                    <iframe style="border-radius:12px" src="<?php the_field("spotify") ?>" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+                    <iframe style="border-radius:12px" src="<?php the_field("spotify") ?>" width="100%" height="152" frameBorder="0" allowfullscreen="" 
+                            allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
                 </div>
             </div>
         </div>

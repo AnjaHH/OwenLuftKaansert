@@ -37,6 +37,18 @@ h1 {
     
 }
 
+h2 {
+    font-size: 6vw !important;
+    font-weight: bold;
+    color: #ffffff;
+    margin-bottom: 0rem !important;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    font-family: "quatro", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+}
+
 h3 {
     font-size: 6vw !important;
     font-weight: bold;
@@ -272,7 +284,6 @@ a.toggle-nav:active {
 .hero-video {
     position: relative;
     width: 100%;
-    
     padding-bottom: 56.25%; /* 16:9 aspect ratio */
 }
 
@@ -282,7 +293,6 @@ a.toggle-nav:active {
     left: 200px;
     width: 70%;
     height: 70%;
-
 }
 
 .top {
@@ -316,16 +326,25 @@ body {
 
   }
 
+  .countdown {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: auto;
+    padding: 50px;
+  }
+
 
 
 /* button */
 
 .buy-ticket {
 display: flex;
-justify-content: flex-end;
-align-items: flex-end;
-padding-right: 80px;
-margin-top: -250px;
+justify-content: center;
+align-items: center;
+
+margin-top: -230px;
 padding-bottom: 20px;
 }
 
@@ -442,19 +461,6 @@ body > div.box > div.line-up > div:nth-child(1) {
 }
 
 
-.gallery-heading {
-    padding-left: 110px;
-    border-bottom: 1px solid #FFFFFF;
-    border-top: 1px solid #FFFFFF;
-}
-
-.gallery-carousel {
-    background-color: #FCCF52;
-    width: 100%;
-    height: 550px;
-    padding-left: 80px;
-}
-
 
 .explore-heading {
     padding-left: 110px;
@@ -493,10 +499,10 @@ body > div.box > div.line-up > div:nth-child(1) {
 
 #bars-info {
     display: flex;
-    justify-content: end;
-    padding: 20px;
-    
+    justify-content: flex-end;
+    margin-right: 20px;
 }
+
 
 
 
@@ -634,84 +640,111 @@ body > div.box > div.line-up > div:nth-child(1) {
 /* gallery */
 
 
+.gallery-heading {
+    padding-left: 110px;
+    border-bottom: 1px solid #FFFFFF;
+    border-top: 1px solid #FFFFFF;
+}
+
+.gallery-carousel {
+    background-color: #FCCF52;
+    width: 100%;
+    height: auto;
+    padding-right: 30px;
+    padding-left: 110px;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+.image-container {
+    overflow-x: hidden;
+   
+}
+.image-wrapper {
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: calc((100% - (1.5rem * (var(--per-view) - 1))) / var(--per-view));
+    grid-gap: 1.5rem;
+    position: relative;
+    left: 0;
+    transition: .3s;
+}
+.image-wrapper > * {
+    aspect-ratio: 4 / 3;
+}
+img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    border-radius: .5rem;
+}
+/* IMAGE */
 
 
 /*historie side */
 
-body{
-    background-color: #7ebdc2;
-}
 
-body::before {
-    content: "";
-    position: fixed;
-    top: 0;
-    left: 0;
+
+
+.backgroundimg{
+    background-image: url(img/2.png);
     width: 100%;
-    height: 100%;
-    background-image: url("img/48110082823_917d6c2ab7_o.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
     background-size: cover;
-    opacity: 0.3; 
-    z-index: -1; 
-}
-
-.info{
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    padding: 1%;
-    color: #fff;
-    gap: 10rem;
 }
 
 
-.tekst{
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    width: 50%;
+.line{
+    border-top: 1px solid #FFFFFF;
+width: 100%;
+height: 3rem;
+}
+.history-text {
+    padding-left: 110px;
+    padding-bottom: 50px;
+   padding-top: 20px;
+   padding-right: 20px;
+   width: 50%;
 }
 
-.logo{
-    width: 20rem;
-    height: auto;
-}
-
-.info_tekst{
-    font-family: quatro, sans-serif;
-    font-style: normal;
-          font-weight: 100;
-}
-
-
-
-.overskift{
-    font-family: quatro, sans-serif;
-    font-style: normal;
-          font-weight: 500;
-}
 
 /* The actual timeline (the vertical ruler) */
 .timeline {
   position: relative;
   margin: 0 auto;
   display: flex;
-  justify-content: center;
-  flex-direction: column;
+}
+
+.timeline.odd {
+justify-content: flex-end;
+width: 100%;
 
 }
+
+.timeline.event {
+    justify-content: flex-start;
+}
+
 
 /* The actual timeline (the vertical ruler) */
+
+
 .timeline::after {
-  content: '';
-  position: absolute;
-  width: 6px;
-  background-color: #fff;
-  top: 30;
-  bottom: 70;
-  left: 50%;
-  margin-left: -3px; 
-}
+    content: '';
+    position: absolute;
+    width: 6px;
+    background-color: #fff;
+    top: -200px;
+    bottom: 380px;
+    left: 50%;  
+  }
+
+  .timeline.even::after{
+    overflow: hidden;
+  }
 
 /*plakat størrelse*/
 .plakat{
@@ -720,36 +753,51 @@ body::before {
 }
 
 /* Container around content */
-.container {
-  padding: 10px 40px;
-  position: relative;
-width: 50%;
+.history_box {
+position: relative;
+  width: 100%;
+display: flex;
+align-items: center;
+justify-content: end;
 
 }
+
 
 /* The circles on the timeline */
-.container::after {
+.history_box::after {
   content: '';
-  position: absolute;
   width: 25px;
   height: 25px;
-  right: -16px;
   background-image: radial-gradient(#fbbb46, #fdd053);
-  top: 90%;
   border-radius: 50%;
   z-index: 1;
-}
-
-/* Place the container to the left */
-.left {
-  right: 25.25%;
+  top: -100%;
 
 }
 
-/* Place the container to the right */
-.right {
-  left: 25.25%;
+
+.history_box.left{
+    display: flex;
+    FLex-direction: row-reverse;
+    padding-right: 80px;
 }
+
+
+.history_box.right{
+    display: flex;
+    justify-content: start;
+    padding-left: 160px;
+}
+
+.left::after {
+    margin-right: 15%;
+ 
+}
+
+.right::after {
+    margin-left: 9.5%;
+}
+
 
 /* Add arrows to the left container (pointing right) */
 .left::before {
@@ -778,19 +826,19 @@ width: 50%;
 }
 
 /* Fix the circle for containers on the right side */
-.right::after {
-  left: -16px;
-}
 
 /* The actual content */
 .content {
   padding: 10px 10px;
   border-radius: 6px;
   display: flex;
-  justify-content: center;
+  justify-content: center ;
   flex-direction: column;
-  align-items: center;
+  align-items: center ;
 }
+
+
+
 
 .year_number{
     color: #fff;
@@ -799,67 +847,11 @@ width: 50%;
           font-weight: 500;
           display: flex;
           justify-content: center;
-          align-items: ;
+    font-size: 4rem ;
+         
 }
 
 
-.countdown{
-    width: 100%;
-    height: 300px;
-}
-
-.wpcdt-timer-wrap{
-    z-index: 9999 !important;
-    background-color: aqua;
-}
-
-.wpcdt-wrap{
-    z-index: 9999 !important;
-    background-color: aqua;
-}
-
-
-/* Media queries - Responsive timeline on screens less than 600px wide */
-@media screen and (max-width: 600px) {
-
-.logo{
-    width: auto;
-    height: 10rem;
-}
-
-.info{
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    padding: 1%;
-    color: #fff;
-    gap: 1rem;
-    align-items: center;
-}
-  
-.timeline::after{
-  display: none;
-}
-
-.container::after{
-    display: none;
-}
-
-.timeline{
-padding-bottom: 15rem;
-width: 0%;
-justify-content: center;
-align-items: center ;
-}
-
-.timeline.odd{
-left: -3rem;
-}
-
-.timeline.even{
-    left: -3rem;
-    }
-}
 
 /* Footer */
 
@@ -958,9 +950,7 @@ left: -3rem;
   width: 100px !important;
   height: auto !important;
 }
-    .header-top h1{
-        
-    }
+    
   
     .menu.main ul li {
         
@@ -1090,14 +1080,6 @@ left: auto;
         width: 100%;
     }
 
-    .bars {
-        -webkit-transform: rotate(0deg);
-        -moz-transform: rotate(0deg);
-        -o-transform: rotate(0deg);
-        -ms-transform: rotate(0deg);
-        transform: rotate(0deg);
-        padding-left: 0px;
-    }
 
     #bar {
         flex-direction: column;
@@ -1209,6 +1191,65 @@ left: auto;
 
       }
 
+      .countdown {
+        
+        padding: 10px;
+      }
+
+      #bars-info {
+        display: flex;
+        justify-content: center;
+        margin-right: 0px;
+    }
     
+
+.logo{
+    width: auto;
+    height: 10rem;
 }
 
+.info{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 1%;
+    color: #fff;
+    gap: 1rem;
+    align-items: center;
+}
+  
+.timeline::after{
+  display: none;
+}
+
+.history_box::after{
+    display: none;
+}
+
+.timeline{
+display: flex;
+justify-content: center;
+}
+
+
+.history_box{
+    width: 100%;
+    padding-right: 5.5rem;
+
+    }
+
+.history_box.right{
+    padding-left: 0;
+    justify-content: end;
+
+}
+
+.history_box.left{
+
+}
+.history-text{
+width: 100%;
+padding-left: 50px;
+}
+
+}
