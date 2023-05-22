@@ -42,8 +42,10 @@ h2 {
     font-weight: bold;
     color: #ffffff;
     margin-bottom: 0rem !important;
-    padding-top: 30px;
-    padding-bottom: 30px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
     font-family: "quatro", sans-serif;
     font-weight: 700;
     font-style: normal;
@@ -335,6 +337,9 @@ body {
     padding: 50px;
   }
 
+  #demo {
+    background-color: #FCCF52;
+  }
 
 
 /* button */
@@ -501,6 +506,7 @@ body > div.box > div.line-up > div:nth-child(1) {
     display: flex;
     justify-content: flex-end;
     margin-right: 20px;
+    padding-top: 50px;
 }
 
 
@@ -962,6 +968,14 @@ justify-content: end;
         font-size:15px !important;
         font-weight: 700;
     }
+    h2 {
+        
+        padding-top: 10px;
+        padding-bottom: 10px;
+        padding-left: 10px;
+        padding-right: 10px;
+        
+    }
 
     .buy-ticket-button {
         background-color: #FCCF52;
@@ -1193,7 +1207,7 @@ left: auto;
 
       .countdown {
         
-        padding: 10px;
+        padding: 20px;
       }
 
       #bars-info {
@@ -1250,6 +1264,14 @@ justify-content: center;
 .history-text{
 width: 100%;
 padding-left: 50px;
+}
+
+.gallery-carousel {
+    
+    padding-right: 20px;
+    padding-left: 20px;
+    padding-top: 20px;
+    padding-bottom: 20px;
 }
 
 }
