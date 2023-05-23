@@ -25,15 +25,15 @@
         </div>
         <div class="footer-right">
             <div class="footer-links">
-                <a href="#"><i class="bi bi-arrow-right"></i> Kunstnere</a>
-                <a href="#"><i class="bi bi-arrow-right"></i> Praktisk info</a>
-                <a href="#"><i class="bi bi-arrow-right"></i> Om Owen Luft</a>
+                <a href="https://anjahein.dk/OwenLuftKaansert/kunstnere/"><i class="bi bi-arrow-right"></i> Kunstnere</a>
+                <a href="https://anjahein.dk/OwenLuftKaansert/praktisk-info/"><i class="bi bi-arrow-right"></i> Praktisk info</a>
+                <a href="https://anjahein.dk/OwenLuftKaansert/om-owenluft/"><i class="bi bi-arrow-right"></i> Om Owen Luft</a>
                 
             </div>
             <div class="footer-links">
-                <a href="#"><i class="bi bi-arrow-right"></i> Historie</a>
-                <a href="#"><i class="bi bi-arrow-right"></i> Privatlivs politik</a>
-                <a href="#"><i class="bi bi-arrow-right"></i> Presse</a>
+                <a href="https://anjahein.dk/OwenLuftKaansert/historie/"><i class="bi bi-arrow-right"></i> Historie</a>
+                <a href="https://anjahein.dk/OwenLuftKaansert/privacy-policy/"><i class="bi bi-arrow-right"></i> Privatlivs politik</a>
+                <a href="https://anjahein.dk/OwenLuftKaansert/presse/"><i class="bi bi-arrow-right"></i> Presse</a>
             </div>
             
         </div>
@@ -41,7 +41,9 @@
     </div>
     
 </div>
-<div class="payment"></div>
+<div class="payment" style="padding-left: 110px;">
+    <p>Dette er et eksamens projekt</p>
+</div>
 
 
 
