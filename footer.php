@@ -18,6 +18,8 @@
             <p>CVR: 44005239</p>
             <p>Sønderskovvej 107</p>
             <p>6800 Varde</p>
+            <p>-----------</p>
+            <p>Kontakt: kaensert@outlook.dk</p>
         
         </div>
         <div class="footer-mid">
