@@ -48,6 +48,3 @@ function to_top_button(){
     <?php
 }
 add_action("wp_enqueue_scripts","to_top_button");
-
-
-
