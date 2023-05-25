@@ -1,3 +1,6 @@
+<meta
+  name="description"
+  content="Owen Luft har en lang historik, med mange hyggelige kånserter bag sig, oplev de sidste mange års kunstnere her.">
 <?php get_header () ?>
 
 
@@ -50,8 +53,69 @@
         <?php endif; ?>
     </div>
     </div>
+
+    <div class="gallery">
+            
+            <div class="gallery-carousel ">
+
+            <div class="image-container">
+            
+  <div class="image-wrapper">
+  <?php $loop = new WP_Query(array('post_type' => 'history-carousel','posts_per_page' => -1, 'orderby' => 'post_id', 'order' => 'ASC')); ?>
+                        <?php while ($loop->have_posts()) : $loop->the_post(); ?>
+     <div class="carousel-image">
+        <img src="<?php the_field("carousel-image") ?>" alt="">    
+    </div>
+   
+
+
+            
+            <?php endwhile; ?>
+                        <?php wp_reset_postdata(); ?>
+                        </div>
+                        </div>
+
+        </div>
+        </div>
+
+    
     </div>
 </div>
+
+<script>
+
+const imageWrapper = document.querySelector('.image-wrapper')
+const imageItems = document.querySelectorAll('.image-wrapper > *')
+const imageLength = imageItems.length
+const perView = 3
+let totalScroll = 0
+const delay = 2000
+
+imageWrapper.style.setProperty('--per-view', perView)
+for(let i = 0; i < perView; i++) {
+  imageWrapper.insertAdjacentHTML('beforeend', imageItems[i].outerHTML)
+}
+
+let autoScroll = setInterval(scrolling, delay)
+
+function scrolling() {
+  totalScroll++
+  if(totalScroll == imageLength + 1) {
+    clearInterval(autoScroll)
+    totalScroll = 1
+    imageWrapper.style.transition = '0s'
+    imageWrapper.style.left = '0'
+    autoScroll = setInterval(scrolling, delay)
+  }
+  const widthEl = document.querySelector('.image-wrapper > :first-child').offsetWidth + 24
+  imageWrapper.style.left = `-${totalScroll * widthEl}px`
+  imageWrapper.style.transition = '.3s'
+}
+
+
+
+  
+    </script>
 
 
 <?php get_footer () ?>

@@ -1,3 +1,6 @@
+<meta
+  name="description"
+  content="Privatlivspolitik i forhold til Owen Luft Kånsert findes her.">
 <?php get_header () ?>
 
 

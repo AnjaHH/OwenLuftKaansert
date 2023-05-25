@@ -1,3 +1,6 @@
+<meta
+  name="description"
+  content="Owen Luft Kånsert Presse regler og informationer finder du her.">
 <?php get_header () ?>
 
 

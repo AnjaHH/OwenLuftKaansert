@@ -1,3 +1,6 @@
+<meta
+  name="description"
+  content="Find alt den info du mangler inden Owen Luft Kånserten går igang.">
 <?php get_header () ?>
 
 <div class="section">

@@ -1,3 +1,7 @@
+<meta
+  name="description"
+  content="Årets kunstnere til dette års Owen Luft Kånsert,, 
+  det er ægte dansk råhygge!">
 <?php get_header () ?>
 
 
